@@ -1,0 +1,36 @@
+STEPS TO GET GCODE FROM INKSCAPE
+Imported image to g-code:
+1.	Launch Inkscape, go to file -> import -> select your image( jpeg/png) -> open
+2.	A Dialogue box (jpeg bitmap image import) appear -> click OK (with default setting). (this step is not needed if you are creating the drawing on inkscape itself) 
+3.	Click the lock icon on the top  
+4.	Adjust the size of image, go to layer-> add layer -> add
+5.	Right click on the image and select move to layer-> select the layer-> move.
+6.	 Select the image go to, path -> trace bitmap (shift+alt+B)
+7.	Trace bitmap dialogue box appears-> click update -> tick live preview box -> adjust brightness threshold –> click OK 
+8.	The vector image forms a layer over jpeg image
+9.	Remove the vector layer by dragging it and delete the jpeg image(right click)
+10.	Select object(vector image), Path->object to path
+11.	Path -> dynamic offset
+12.	Extensions->Gcodetools-> tools library -> select tool ->apply
+13.	Green box appears, we can change the parameters in the box by choosing text icon and typing over the required parameter
+14.	Select object -> extensions -> Gcodetools->orientation points -> apply
+15.	Select object ->extensions->Gcodetools->path to gcode->prefferences (change file name and directory if needed) -> select path to gcode tab and click apply
+16.	The object would now look a bit distorted, your Gcode has been created in the choice of directory you had entered in step 15 in preference.
+
+Text to g-code
+1.	File -> document properties -> select the parameters of your work base
+2.	Layer->add layer -> ok
+3.	Select text icon and type the text to be converted to gcode
+4.	Right click on the object(text)-> move to layer -> select the layer to move the object to
+5.	Select object, Path ->object to path
+6.	Path -> dynamic offset
+7.	Extensions -> gcodetools -> tool library->select tool-> apply
+8.	Extensions -> gcode tools-> orientation points->apply
+9.	Extensions->gcode tools-> path to gcode-> edit preferences-> select path to gcode tab-> apply
+10.	Gcode created in the selected directory
+
+Image and text to Gcode
+1.	Import the image and type the text as in above methods
+2.	Select both the objects (shift + select) -> object -> group
+3.	Follow the above steps
+4.	Layer->path(object to path, dynamic offset)->extensions -> gcode tools (tool library, orientation points, path to gcode)
